@@ -1,6 +1,3 @@
-plugins{
-  id 'base'
-}
 description = 'A trivial Gradle build'
 version = '1.0'
 task copy(type:Copy){
@@ -14,4 +11,27 @@ task hello{
  doLast{
   println 'Hello World!'
  }
+}
+
+task compile{
+  doLast{
+    println 'complie source'
+  }
+}
+task compileTest(dependsOn:compile){
+  doLast{
+    println 'compling unit tests'
+  }
+}
+
+task test(dependsOn:[compile , compileTest]){
+  doLast{
+    println 'running unit tests'
+  }
+}
+
+task dist(dependsOn:[compile ,test]){
+  doLast{
+    println 'building the distribution'
+  }
 }
