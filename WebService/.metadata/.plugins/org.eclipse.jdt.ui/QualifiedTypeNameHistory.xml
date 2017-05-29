@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.osgi.demo.localdictquery.impl.LocalDictQueryServiceImpl"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ConcurrentHashMap"/>
+<fullyQualifiedTypeName name="org.osgi.framework.ServiceRegistration"/>
+<fullyQualifiedTypeName name="org.osgi.demo.remotedictquery.impl.RemoteDictQueryServiceImpl"/>
+<fullyQualifiedTypeName name="org.osgi.demo.dictqueryweb.Activator"/>
+<fullyQualifiedTypeName name="org.osgi.service.http.HttpService"/>
+<fullyQualifiedTypeName name="org.osgi.demo.dictqueryweb.servlet.DictQueryServlet"/>
+<fullyQualifiedTypeName name="org.osgi.demo.dictquery.query.QueryService"/>
+<fullyQualifiedTypeName name="org.apache.xmlbeans.xml.stream.XMLStreamException"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="org.apache.axiom.om.OMElement"/>
+<fullyQualifiedTypeName name="javax.xml.namespace.QName"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.apache.axiom.om.OMAttribute"/>
+<fullyQualifiedTypeName name="org.apache.axiom.om.impl.llom.OMAttributeImpl"/>
+<fullyQualifiedTypeName name="javax.xml.stream.XMLStreamException"/>
+</qualifiedTypeNameHistroy>

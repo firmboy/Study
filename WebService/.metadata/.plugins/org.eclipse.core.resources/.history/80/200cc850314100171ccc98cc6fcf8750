@@ -1,0 +1,22 @@
+package com.firmboy.impl;
+
+import javax.jws.WebService;
+
+import com.firmboy.CalculatorService;
+
+@WebService(endpointInterface="com.demo.CalculatorService",serviceName="calculator")
+public class CalculatorServiceImpl implements CalculatorService {
+
+	@Override
+	public int add(int a, int b) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String concat(String a, String b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

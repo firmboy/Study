@@ -1,0 +1,11 @@
+ # Operate
+
+ ## 1.创建自己电脑的ssh秘钥：ssh-keygen -t rsa -C "yangjian5268@163.com"
+ ## 2.在github上添加ssh中的公钥
+ ## 3.在github上创建一个repo仓库
+ ## 4.将本地的仓库和远程仓库关联起来：git remote add origin git@github.com:michaelliao/learngit.git
+    需要注意的是：后面的地址是第三步创建的仓库的ssh链接
+ ## 5.将本地仓库的文件推送到远程仓库中：git push -u origin master
+ ## 6.以后的提交操作：git push origin master
+
+ ## 7.从远程仓库clone到本地：git clone git@github.com:michaelliao/gitskills.git

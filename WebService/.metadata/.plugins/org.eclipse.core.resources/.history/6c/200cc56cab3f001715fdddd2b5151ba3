@@ -1,0 +1,45 @@
+package org.sky.axis2.helloworld;
+
+public class HelloWorldWithReturnNonBlock {
+	private static EndpointReference targetEPR = new EndpointReference(
+    "http://localhost:8080/Axis2Service/services/HelloWorld");
+	public void sayHello() {
+		OMFactory fac = OMAbstractFactory.getOMFactory();
+		OMNamespace omNs = fac.createOMNamespace(
+		             "http://helloworld.axis2.sky.org", "");
+		OMElement method = fac.createOMElement("sayHello", omNs);
+		OMElement name = fac.createOMElement("name", omNs);
+		name.setText("ymk");
+		method.addChild(name);
+		method.build();
+		Options options = new Options();
+		options.setTo(targetEPR);
+		ServiceClient sender = null;
+		try {
+		    HelloWorldNonBlockCB callback = new HelloWorldNonBlockCB();
+		    sender = new ServiceClient();
+		    sender.setOptions(options);
+		    sender.sendReceiveNonBlocking(method, callback);
+		    synchronized (callback) {
+		             try {
+		                      callback.wait();
+		             } catch (InterruptedException e) {
+		                      e.printStackTrace();
+		             }
+		    }
+		} catch (AxisFault e) {
+		    e.printStackTrace();
+		} finally {
+		    if (sender != null)
+		             try {
+		                       sender.cleanup();
+		             } catch (Exception e) {
+		             }
+		}
+	}
+	
+	public static void main(String[] args) {
+		HelloWorldWithReturnNonBlock testClient = new HelloWorldWithReturnNonBlock();
+		testClient.sayHello();
+	}
+}

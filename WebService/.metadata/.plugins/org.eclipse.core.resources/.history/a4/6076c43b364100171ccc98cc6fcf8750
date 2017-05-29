@@ -1,0 +1,7 @@
+package com.client;
+
+public class CxfClient {
+	public static void main(String[] args) {
+		
+	}
+}

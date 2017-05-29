@@ -1,0 +1,32 @@
+package org.sky.axis2.helloworld;
+
+import org.apache.axis2.client.async.AxisCallback;
+import org.apache.axis2.context.MessageContext;
+
+public class HelloWorldNonBlockCB implements AxisCallback {
+
+	@Override
+	public void onComplete() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onError(Exception arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onFault(MessageContext arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onMessage(MessageContext arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
